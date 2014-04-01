@@ -9,5 +9,8 @@ WildlifeTracker::Application.routes.draw do
   match('species/:id', {:via => [:patch, :put], :to => 'species#update'})
   match('species/:id/', {:via => :delete, :to => 'species#destroy'})
   #Sightings:
-
+  match('species/:species_id/sightings/new', {:via => :get, :to => 'sightings#new'})
+  match('species/:species_id/sightings', { :via => :post, :to => 'sightings#create'})
+  match('species/:species_id/sightings/', {:via => :get, :to => 'sightings#show'})
+  match('species/:species_id/sightings/:id/view', {:via => :get, :to => 'sightings#view'})
 end

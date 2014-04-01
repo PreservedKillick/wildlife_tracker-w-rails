@@ -1,0 +1,12 @@
+<h1>Your sighting of <%= @sighting.species.name %> has been added</h1>
+
+<h3>Sighting details</h3>
+
+<ul>
+<li>Date: <%= @sighting.date %></li>
+<li>Time: <%= @sighting.time.strftime("%H:%M") %></li>
+<li>Notes: <%= @sighting.notes %></li>
+
+</ul>
+
+<p><a href="/species">Return to species listing</a></p>
