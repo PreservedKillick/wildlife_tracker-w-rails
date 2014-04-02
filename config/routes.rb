@@ -13,4 +13,6 @@ WildlifeTracker::Application.routes.draw do
   match('species/:species_id/sightings', { :via => :post, :to => 'sightings#create'})
   match('species/:species_id/sightings/', {:via => :get, :to => 'sightings#show'})
   match('species/:species_id/sightings/:id/view', {:via => :get, :to => 'sightings#view'})
+  #Locations:
+  match('species/:species_id/sightings/new', {:via => :get, :to => 'locations#new'})
 end

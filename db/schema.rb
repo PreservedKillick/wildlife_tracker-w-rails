@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401204745) do
+ActiveRecord::Schema.define(version: 20140402001123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "locations", force: true do |t|
-    t.string "lat_long"
+    t.string "region"
   end
 
   create_table "sightings", force: true do |t|
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20140401204745) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "location_id"
+    t.decimal  "latitute"
+    t.decimal  "longitude"
   end
 
   create_table "species", force: true do |t|

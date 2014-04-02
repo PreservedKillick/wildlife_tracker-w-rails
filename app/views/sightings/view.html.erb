@@ -4,6 +4,7 @@
 
 <p>Date: <%= @sighting.date %></p>
 <p>Time: <%= @sighting.time.strftime("%H:%M") %></p>
+<p>Location: <%= @sighting.location.lat_long %></p>
 <p>Notes: <%= @sighting.notes %></p>
 
 <p><a href="/species">Return to species listing</a></p>

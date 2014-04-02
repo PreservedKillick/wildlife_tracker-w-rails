@@ -10,6 +10,10 @@
 <% end %>
 
 <form action="/species/<%= @sighting.species.id %>/sightings" method="post">
+  <label for="latitude">Sighting Latitude</label>
+  <input id="latitude" name="sighting[latitude]" type="text">
+  <label for="longitude">Sighting Longitude</label>
+  <input id="longitude" name="sighting[longitude]" type="text">
   <label for="date">Date Sighted</label>
   <input id="date" name="sighting[date]" type="date">
   <label for="time">Time Sighted</label>

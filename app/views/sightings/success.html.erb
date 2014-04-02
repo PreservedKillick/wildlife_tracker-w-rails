@@ -5,6 +5,7 @@
 <ul>
 <li>Date: <%= @sighting.date %></li>
 <li>Time: <%= @sighting.time.strftime("%H:%M") %></li>
+<li>Location: <%= @sighting.location.lat_long %></li>
 <li>Notes: <%= @sighting.notes %></li>
 
 </ul>
